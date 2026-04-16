@@ -31,6 +31,6 @@ typing-extensions==4.15.0
 sounddevice==0.5.3
 
 # Optional (safe to keep)
-numpy==2.3.5
+numpy==1.26.4
 
 python-dotenv==1.2.1

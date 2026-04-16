@@ -1,5 +1,10 @@
 import logging
 
+import threading
+import http.server
+import socketserver
+import os
+
 from dotenv import load_dotenv
 from livekit.agents import (
     Agent,
@@ -135,5 +140,24 @@ async def entrypoint(ctx: JobContext):
     await ctx.connect()
 
 
+
+PORT = int(os.environ.get("PORT", 10000))
+
+def run_dummy_server():
+    Handler = http.server.SimpleHTTPRequestHandler
+    with socketserver.TCPServer(("", PORT), Handler) as httpd:
+        print(f"Dummy server running on port {PORT}")
+        httpd.serve_forever()
+
+
 if __name__ == "__main__":
-    cli.run_app(WorkerOptions(entrypoint_fnc=entrypoint, prewarm_fnc=prewarm))
+    # Start dummy HTTP server in separate thread
+    threading.Thread(target=run_dummy_server, daemon=True).start()
+
+    # Run LiveKit agent (blocking)
+    cli.run_app(
+        WorkerOptions(
+            entrypoint_fnc=entrypoint,
+            prewarm_fnc=prewarm
+        )
+    )

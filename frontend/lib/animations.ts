@@ -51,3 +51,21 @@ export const STAGGER_CONTAINER: Variants = {
     },
   },
 };
+
+const VIEW_VARIANTS: Variants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+const VIEW_TRANSITION: Transition = {
+  duration: 0.2,
+  ease: "easeInOut",
+};
+
+const VIEW_MOTION_PROPS = {
+  variants: VIEW_VARIANTS,
+  initial: "hidden",
+  animate: "visible",
+  exit: "hidden",
+  transition: VIEW_TRANSITION,
+};

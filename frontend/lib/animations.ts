@@ -52,30 +52,4 @@ export const STAGGER_CONTAINER: Variants = {
   },
 };
 
-const VIEW_VARIANTS: Variants = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-};
 
-const VIEW_transitions: Transition = {
-  duration: 0.2,
-  ease: 'easeInOut' as const,
-};
-
-const CHAT_VARIANTS: Variants = {
-  hidden: {
-    height: 0,
-    opacity: 0,
-    marginBottom: 0,
-  },
-  visible: {
-    height: "auto",
-    opacity: 1,
-    marginBottom: 16,
-  },
-};
-
-const CHAT_transitions: Transition = {
-  duration: 0.2,
-  ease: 'easeInOut' as const,
-};

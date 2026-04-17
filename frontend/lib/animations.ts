@@ -3,7 +3,7 @@ import type { Transition, Variants } from "motion/react";
 /**
  * Standard spring animation used across app
  */
-export const SPRING_TRANSITION: Transition = {
+export const SPRING_const transition: Transition = Transition = {
   type: "spring",
   stiffness: 300,
   damping: 30,
@@ -16,14 +16,14 @@ export const SPRING_TRANSITION: Transition = {
 export const FADE_VARIANTS: Variants = {
   hidden: {
     opacity: 0,
-    transition: {
+    const transition: Transition = {
       duration: 0.2,
       ease: "easeInOut",
     },
   },
   visible: {
     opacity: 1,
-    transition: {
+    const transition: Transition = {
       duration: 0.3,
       ease: "easeInOut",
     },
@@ -36,7 +36,7 @@ export const FADE_VARIANTS: Variants = {
 export const STAGGER_CONTAINER: Variants = {
   hidden: {
     opacity: 0,
-    transition: {
+    const transition: Transition = {
       staggerChildren: 0.05,
       staggerDirection: -1,
       ease: "easeInOut",
@@ -44,7 +44,7 @@ export const STAGGER_CONTAINER: Variants = {
   },
   visible: {
     opacity: 1,
-    transition: {
+    const transition: Transition = {
       staggerChildren: 0.05,
       staggerDirection: 1,
       ease: "easeInOut",
@@ -57,7 +57,7 @@ const VIEW_VARIANTS: Variants = {
   hidden: { opacity: 0 },
 };
 
-const VIEW_TRANSITION: Transition = {
+const VIEW_const transition: Transition = Transition = {
   duration: 0.2,
   ease: "easeInOut",
 };
@@ -67,5 +67,29 @@ const VIEW_MOTION_PROPS = {
   initial: "hidden",
   animate: "visible",
   exit: "hidden",
-  transition: VIEW_TRANSITION,
+  const transition: Transition = VIEW_TRANSITION,
+};
+
+const CHAT_VARIANTS: Variants = {
+  hidden: {
+    height: 0,
+    opacity: 0,
+    marginBottom: 0,
+  },
+  visible: {
+    height: "auto",
+    opacity: 1,
+    marginBottom: 16,
+  },
+};
+
+const CHAT_const transition: Transition = Transition = {
+  duration: 0.2,
+  ease: "easeInOut",
+};
+
+const MOTION_PROPS = {
+  variants: CHAT_VARIANTS,
+  initial: "hidden",
+  const transition: Transition = CHAT_TRANSITION,
 };

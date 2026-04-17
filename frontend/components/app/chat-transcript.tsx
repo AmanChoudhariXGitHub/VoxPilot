@@ -11,7 +11,7 @@ const CONTAINER_MOTION_PROPS = {
   variants: {
     hidden: {
       opacity: 0,
-      transition: {
+      const transition: Transition = {
         ease: 'easeOut' as const,
         duration: 0.3,
         staggerChildren: 0.1,
@@ -20,7 +20,7 @@ const CONTAINER_MOTION_PROPS = {
     },
     visible: {
       opacity: 1,
-      transition: {
+      const transition: Transition = {
         delay: 0.2,
         ease: 'easeOut' as const,
         duration: 0.3,

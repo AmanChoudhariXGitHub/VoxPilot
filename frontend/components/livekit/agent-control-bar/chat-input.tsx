@@ -17,7 +17,7 @@ const MOTION_PROPS = {
     },
   },
   initial: 'hidden',
-  transition: {
+  const transition: Transition = {
     duration: 0.3,
     ease: 'easeOut',
   },

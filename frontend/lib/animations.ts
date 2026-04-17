@@ -1,10 +1,10 @@
-import type { Transition, Variants } from "motion/react";
+import type { Transition, Variants } from 'motion/react';
 
 /**
  * Standard spring animation used across app
  */
 export const SPRING_transitions: Transition = {
-  type: "spring" as const,
+  type: 'spring' as const,
   stiffness: 300,
   damping: 30,
   mass: 1,
@@ -18,14 +18,14 @@ export const FADE_VARIANTS: Variants = {
     opacity: 0,
     transition: {
       duration: 0.2,
-      ease: "easeInOut" as const,
+      ease: 'easeInOut' as const,
     },
   },
   visible: {
     opacity: 1,
     transition: {
       duration: 0.3,
-      ease: "easeInOut" as const,
+      ease: 'easeInOut' as const,
     },
   },
 };
@@ -39,7 +39,7 @@ export const STAGGER_CONTAINER: Variants = {
     transition: {
       staggerChildren: 0.05,
       staggerDirection: -1,
-      ease: "easeInOut" as const,
+      ease: 'easeInOut' as const,
     },
   },
   visible: {
@@ -47,7 +47,7 @@ export const STAGGER_CONTAINER: Variants = {
     transition: {
       staggerChildren: 0.05,
       staggerDirection: 1,
-      ease: "easeInOut" as const,
+      ease: 'easeInOut' as const,
     },
   },
 };
@@ -59,15 +59,7 @@ const VIEW_VARIANTS: Variants = {
 
 const VIEW_transitions: Transition = {
   duration: 0.2,
-  ease: "easeInOut" as const,
-};
-
-const VIEW_MOTION_PROPS = {
-  variants: VIEW_VARIANTS,
-  initial: "hidden",
-  animate: "visible",
-  exit: "hidden",
-  transition: VIEW_transitions,
+  ease: 'easeInOut' as const,
 };
 
 const CHAT_VARIANTS: Variants = {
@@ -85,11 +77,5 @@ const CHAT_VARIANTS: Variants = {
 
 const CHAT_transitions: Transition = {
   duration: 0.2,
-  ease: "easeInOut" as const,
-};
-
-const MOTION_PROPS = {
-  variants: CHAT_VARIANTS,
-  initial: "hidden",
-  transition: CHAT_transitions,
+  ease: 'easeInOut' as const,
 };

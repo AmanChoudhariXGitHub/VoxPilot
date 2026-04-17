@@ -3,8 +3,8 @@ import type { Transition, Variants } from "motion/react";
 /**
  * Standard spring animation used across app
  */
-export const SPRING_const transition: Transition = Transition = {
-  type: "spring",
+export const SPRING_transitions: Transition = {
+  type: "spring" as const,
   stiffness: 300,
   damping: 30,
   mass: 1,
@@ -16,16 +16,16 @@ export const SPRING_const transition: Transition = Transition = {
 export const FADE_VARIANTS: Variants = {
   hidden: {
     opacity: 0,
-    const transition: Transition = {
+    transitions: {
       duration: 0.2,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
   visible: {
     opacity: 1,
-    const transition: Transition = {
+    transitions: {
       duration: 0.3,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 };
@@ -36,18 +36,18 @@ export const FADE_VARIANTS: Variants = {
 export const STAGGER_CONTAINER: Variants = {
   hidden: {
     opacity: 0,
-    const transition: Transition = {
+    transitions: {
       staggerChildren: 0.05,
       staggerDirection: -1,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
   visible: {
     opacity: 1,
-    const transition: Transition = {
+    transitions: {
       staggerChildren: 0.05,
       staggerDirection: 1,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 };
@@ -57,9 +57,9 @@ const VIEW_VARIANTS: Variants = {
   hidden: { opacity: 0 },
 };
 
-const VIEW_const transition: Transition = Transition = {
+const VIEW_transitions: Transition = {
   duration: 0.2,
-  ease: "easeInOut",
+  ease: "easeInOut" as const,
 };
 
 const VIEW_MOTION_PROPS = {
@@ -67,7 +67,7 @@ const VIEW_MOTION_PROPS = {
   initial: "hidden",
   animate: "visible",
   exit: "hidden",
-  const transition: Transition = VIEW_TRANSITION,
+  transitions: VIEW_TRANSITION,
 };
 
 const CHAT_VARIANTS: Variants = {
@@ -83,13 +83,13 @@ const CHAT_VARIANTS: Variants = {
   },
 };
 
-const CHAT_const transition: Transition = Transition = {
+const CHAT_transitions: Transition = {
   duration: 0.2,
-  ease: "easeInOut",
+  ease: "easeInOut" as const,
 };
 
 const MOTION_PROPS = {
   variants: CHAT_VARIANTS,
   initial: "hidden",
-  const transition: Transition = CHAT_TRANSITION,
+  transitions: CHAT_TRANSITION,
 };

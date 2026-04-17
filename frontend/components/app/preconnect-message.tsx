@@ -11,7 +11,7 @@ const VIEW_MOTION_PROPS = {
   variants: {
     visible: {
       opacity: 1,
-      const transition: Transition = {
+      transitions: {
         ease: 'easeIn' as const,
         duration: 0.5,
         delay: 0.8,
@@ -19,7 +19,7 @@ const VIEW_MOTION_PROPS = {
     },
     hidden: {
       opacity: 0,
-      const transition: Transition = {
+      transitions: {
         ease: 'easeIn' as const,
         duration: 0.5,
         delay: 0,

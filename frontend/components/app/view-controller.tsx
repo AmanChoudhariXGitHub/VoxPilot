@@ -22,7 +22,7 @@ const VIEW_MOTION_PROPS = {
   initial: 'hidden',
   animate: 'visible',
   exit: 'hidden',
-  const transition: Transition = {
+  transitions: {
     duration: 0.5,
     ease: 'linear' as const,
   },

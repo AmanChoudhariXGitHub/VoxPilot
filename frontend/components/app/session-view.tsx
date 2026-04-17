@@ -33,7 +33,7 @@ const BOTTOM_VIEW_MOTION_PROPS = {
   initial: 'hidden',
   animate: 'visible',
   exit: 'hidden',
-  const transition: Transition = {
+  transitions: {
     duration: 0.3,
     delay: 0.5,
     ease: 'easeOut' as const,

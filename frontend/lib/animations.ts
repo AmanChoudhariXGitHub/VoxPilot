@@ -51,5 +51,3 @@ export const STAGGER_CONTAINER: Variants = {
     },
   },
 };
-
-

@@ -16,14 +16,14 @@ export const SPRING_transitions: Transition = {
 export const FADE_VARIANTS: Variants = {
   hidden: {
     opacity: 0,
-    transitions: {
+    transition: {
       duration: 0.2,
       ease: "easeInOut" as const,
     },
   },
   visible: {
     opacity: 1,
-    transitions: {
+    transition: {
       duration: 0.3,
       ease: "easeInOut" as const,
     },
@@ -36,7 +36,7 @@ export const FADE_VARIANTS: Variants = {
 export const STAGGER_CONTAINER: Variants = {
   hidden: {
     opacity: 0,
-    transitions: {
+    transition: {
       staggerChildren: 0.05,
       staggerDirection: -1,
       ease: "easeInOut" as const,
@@ -44,7 +44,7 @@ export const STAGGER_CONTAINER: Variants = {
   },
   visible: {
     opacity: 1,
-    transitions: {
+    transition: {
       staggerChildren: 0.05,
       staggerDirection: 1,
       ease: "easeInOut" as const,
@@ -67,7 +67,7 @@ const VIEW_MOTION_PROPS = {
   initial: "hidden",
   animate: "visible",
   exit: "hidden",
-  transitions: VIEW_TRANSITION,
+  transition: VIEW_transitions,
 };
 
 const CHAT_VARIANTS: Variants = {
@@ -91,5 +91,5 @@ const CHAT_transitions: Transition = {
 const MOTION_PROPS = {
   variants: CHAT_VARIANTS,
   initial: "hidden",
-  transitions: CHAT_TRANSITION,
+  transition: CHAT_transitions,
 };
